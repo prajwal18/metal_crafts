@@ -36,6 +36,87 @@
         }
     </style>
 </head>
+    <!-- Navigation Bar -->
+        <nav id="navBar" class="bg-gradient-to-b from-[#2a1f14] py-2 shadow-2xl lotus-pattern rounded-lg sticky top-0 left-0 z-50 transition-opacity duration-500 opacity-100 w-auto">
+        <ul class="flex space-x-4 md:space-x-8 px-6 items-center">
+            <li>
+            <a href="#" class="text-yellow-400 hover:text-yellow-300 flex items-center justify-center h-full">
+                Home
+            </a>
+            </li>
+            <li>
+            <a href="#" class="text-yellow-400 hover:text-yellow-300 flex items-center justify-center h-full">
+                Statues
+            </a>
+            </li>
+            <li>
+            <a href="#" class="text-yellow-400 hover:text-yellow-300 flex items-center justify-center h-full">
+                Ritual Items
+            </a>
+            </li>
+            <li>
+            <a href="#" class="text-yellow-400 hover:text-yellow-300 flex items-center justify-center h-full">
+                Wall Decor
+            </a>
+            </li>
+            <li>
+            <a href="#" class="text-yellow-400 hover:text-yellow-300 flex items-center justify-center h-full">
+                About
+            </a>
+            </li>
+        </ul>
+        </nav>
+
+
+
+        <script>
+        const nav = document.getElementById('navBar');
+        let visible = true;
+        let scrollTimeout;
+        let isHovered = false;
+
+        nav.addEventListener('mouseenter', () => {
+            isHovered = true;
+            nav.style.opacity = '1';
+            visible = true;
+            if (scrollTimeout) clearTimeout(scrollTimeout);
+        });
+
+        nav.addEventListener('mouseleave', () => {
+            isHovered = false;
+            // Start hiding timer on mouse leave, if not scrolling
+            scrollTimeout = setTimeout(() => {
+            if (!isHovered && window.scrollY >= 50) {
+                nav.style.opacity = '0';
+                visible = false;
+            }
+            }, 1000); // Adjust delay here if needed
+        });
+
+        window.addEventListener('scroll', () => {
+            if (scrollTimeout) clearTimeout(scrollTimeout);
+
+            if (window.scrollY < 50) {
+            nav.style.opacity = '1';
+            visible = true;
+            return;
+            }
+
+            if (!visible) {
+            nav.style.opacity = '1';
+            visible = true;
+            }
+
+            // Hide only if not hovered
+            scrollTimeout = setTimeout(() => {
+            if (!isHovered && window.scrollY >= 50) {
+                nav.style.opacity = '0';
+                visible = false;
+            }
+            }, 1000);
+        });
+        </script>
+
 <body>
     <!-- Header with traditional Buddhist patterns -->
     <header class="header-bg py-8">
@@ -82,47 +163,6 @@
             <div class="flex-shrink-0 w-16"></div>
         </div>
     </header>
-
-    <!-- Navigation -->
-    <nav class="bg-amber-900 text-amber-50 py-4 lotus-pattern shadow-md">
-    <div class="container mx-auto px-4">
-        <ul class="flex justify-start space-x-6 md:space-x-12">
-        <li>
-            <a href="#" class="relative text-lg font-medium text-amber-50 transition duration-300 ease-in-out hover:text-yellow-400 group">
-            Home
-            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="relative text-lg font-medium text-amber-50 transition duration-300 ease-in-out hover:text-yellow-400 group">
-            Statues
-            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="relative text-lg font-medium text-amber-50 transition duration-300 ease-in-out hover:text-yellow-400 group">
-            Ritual Items
-            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="relative text-lg font-medium text-amber-50 transition duration-300 ease-in-out hover:text-yellow-400 group">
-            Wall Decor
-            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="relative text-lg font-medium text-amber-50 transition duration-300 ease-in-out hover:text-yellow-400 group">
-            About
-            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-        </li>
-        </ul>
-    </div>
-    </nav>
-
-
-
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-12">
