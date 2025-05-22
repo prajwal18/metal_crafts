@@ -11,13 +11,8 @@
         
         body {
             font-family: 'Noto Sans Devanagari', sans-serif;
-            background-color: #05101c;
+            background-color:#1F2937;
             color: #4a3a2a;
-        }
-        
-        .header-bg {
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23d4b483" fill-opacity="0.1" d="M50 0 L100 50 L50 100 L0 50 Z"/></svg>');
-            background-size: 60px 60px;
         }
         
         .artifact-card {
@@ -38,11 +33,6 @@
         
         .sanskrit {
             font-family: 'Noto Sans Devanagari', sans-serif;
-        }
-        
-        .lotus-pattern {
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><path fill="%23d4b483" fill-opacity="0.1" d="M30 0 C40 10, 50 10, 60 0 C50 20, 50 40, 30 60 C10 40, 10 20, 0 0 C10 10, 20 10, 30 0 Z"/></svg>');
-            background-size: 60px 60px;
         }
     </style>
 </head>
@@ -94,17 +84,45 @@
     </header>
 
     <!-- Navigation -->
-    <nav class="bg-amber-900 text-amber-50 py-4 lotus-pattern">
-        <div class="container mx-auto px-4">
-            <ul class="flex justify-center space-x-6 md:space-x-12">
-                <li><a href="#" class="hover:text-amber-200">Home</a></li>
-                <li><a href="#" class="hover:text-amber-200">Statues</a></li>
-                <li><a href="#" class="hover:text-amber-200">Ritual Items</a></li>
-                <li><a href="#" class="hover:text-amber-200">Wall Decor</a></li>
-                <li><a href="#" class="hover:text-amber-200">About</a></li>
-            </ul>
-        </div>
+    <nav class="bg-amber-900 text-amber-50 py-4 lotus-pattern shadow-md">
+    <div class="container mx-auto px-4">
+        <ul class="flex justify-start space-x-6 md:space-x-12">
+        <li>
+            <a href="#" class="relative text-lg font-medium text-amber-50 transition duration-300 ease-in-out hover:text-yellow-400 group">
+            Home
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="relative text-lg font-medium text-amber-50 transition duration-300 ease-in-out hover:text-yellow-400 group">
+            Statues
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="relative text-lg font-medium text-amber-50 transition duration-300 ease-in-out hover:text-yellow-400 group">
+            Ritual Items
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="relative text-lg font-medium text-amber-50 transition duration-300 ease-in-out hover:text-yellow-400 group">
+            Wall Decor
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="relative text-lg font-medium text-amber-50 transition duration-300 ease-in-out hover:text-yellow-400 group">
+            About
+            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+        </li>
+        </ul>
+    </div>
     </nav>
+
+
+
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-12">
@@ -139,12 +157,12 @@
 
         <!-- Artifact Categories -->
         <section>
-            <h2 class="text-3xl font-bold text-center text-amber-900 mb-12">Our Sacred Collection</h2>
+            <h2 class="text-3xl font-bold text-center text-yellow-500 mb-12">Our Sacred Collection</h2>
             
             <!-- Statues Section -->
             <div class="mb-16">
-                <h3 class="text-2xl font-semibold text-amber-800 mb-6 flex items-center">
-                    <i class="fas fa-hands-praying mr-3"></i>
+                <h3 class="text-2xl font-semibold text-amber-800 mb-6 flex items-center text-yellow-500">
+                    <i class="fas fa-hands-praying mr-3 text-yellow-500"></i>
                     Buddha & Deity Statues
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -231,7 +249,7 @@
 
             <!-- Ritual Items Section -->
             <div class="mb-16">
-                <h3 class="text-2xl font-semibold text-amber-800 mb-6 flex items-center">
+                <h3 class="text-2xl font-semibold text-amber-800 mb-6 flex items-center text-yellow-500">
                     <i class="fas fa-praying-hands mr-3"></i>
                     Ritual Items & Offerings
                 </h3>
@@ -329,7 +347,7 @@
 
             <!-- Wall Decor Section -->
             <div>
-                <h3 class="text-2xl font-semibold text-amber-800 mb-6 flex items-center">
+                <h3 class="text-2xl font-semibold text-amber-800 mb-6 flex items-center text-yellow-500">
                     <i class="fas fa-mountain mr-3"></i>
                     Wall Hangings & Decor
                 </h3>
