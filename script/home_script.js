@@ -24,7 +24,7 @@ const data = {
         {
           "name": "Amitabha Buddha Statue",
           "description": "Brass statue of the Buddha of Infinite Light, 10\" tall with hand-carved details. This statue is not only a powerful symbol in Buddhist temples but also a meaningful addition to your home. Placing it in your living room, meditation space, or garden can create a peaceful atmosphere and inspire daily mindfulness.",
-          "image": "",
+          "image": "./assets/AmitbhaBuddha.webp",
           "price": "$49.99"
         },
         {
@@ -153,9 +153,9 @@ data.collection.forEach((item) => {
               <img
                 src="${artifact.image}"
                 alt="${artifact.name}"
-                class="w-full h-1/2 object-cover transition-transform duration-500 group-hover:scale-125 artifact-image"
+                class="w-full h-2/3 object-cover transition-transform duration-500 hover:scale-125 artifact-image"
               />
-              <div class="p-6 bg-white">
+              <div class="p-6 bg-white relative z-10 h-1/3">
                 <div class="flex gap-2 justify-between">
                     <h4 class="text-xl font-semibold text-amber-900 mb-2">
                     ${artifact.name}
@@ -165,7 +165,7 @@ data.collection.forEach((item) => {
                     </h4>
                 </div>
                 <p class="text-amber-700 mb-4">
-                  ${artifact.description.substring(0,1055)}...
+                  ${artifact.description.substring(0,300)}...
                 </p>
               </div>
             </div>
