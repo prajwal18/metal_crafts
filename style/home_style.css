@@ -10,6 +10,7 @@ body {
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-height: 500px;
+  min-height: 350px;
 }
 
 .artifact-card:hover {
@@ -26,3 +27,18 @@ body {
 .sanskrit {
   font-family: "Noto Sans Devanagari", sans-serif;
 }
+
+/* -- Shimmer Effect of the page title -- */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.animate-shimmer {
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+/* -- Shimmer Effect of the page title -- */

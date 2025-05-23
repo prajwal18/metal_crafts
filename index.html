@@ -14,182 +14,89 @@
       href="./assets/buddha_icon_image.png"
       type="image/x-icon"
     />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600&display=swap");
-
-      body {
-        font-family: "Noto Sans Devanagari", sans-serif;
-        background-color: #1f2937;
-        color: #4a3a2a;
-      }
-
-      .artifact-card {
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        max-height: 500px;
-      }
-
-      .artifact-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-      }
-
-      .divider {
-        border-top: 2px solid #d4b483;
-        width: 80%;
-        margin: 0 auto;
-      }
-
-      .sanskrit {
-        font-family: "Noto Sans Devanagari", sans-serif;
-      }
-    </style>
+    <link rel="stylesheet" href="./style/home_style.css" />
   </head>
-  <!-- Navigation Bar -->
-  <nav
-    id="navBar"
-    class="bg-gradient-to-b from-[#2a1f14] py-2 shadow-2xl lotus-pattern rounded-lg sticky top-0 left-0 z-50 transition-opacity duration-500 opacity-100 w-auto flex justify-between items-center"
-  >
-    <div class="flex justify-between items-center px-6">
-      <div class="flex items-center">
-        <!-- Add Logo Image without Spelling-->
-        <img
-          src="./assets/Black Gold and black sunshine meditation studio logo.png"
-          alt="Logo"
-          class="w-16 h-16 rounded-full"
-        />
-        <span class="text-yellow-400 text-xl font-bold ml-2"
-          >Divine Crafts</span
-        >
-      </div>
-    </div>
-    <ul class="flex space-x-4 md:space-x-8 px-6 items-center">
-      <li>
-        <a
-          href="#"
-          class="relative text-yellow-400 hover:text-yellow-300 flex items-center justify-center h-full group"
-        >
-          Home
-          <span
-            class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-yellow-300 rounded transition-all duration-300 ease-in-out group-hover:left-0 group-hover:w-full"
-          ></span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="#"
-          class="relative text-yellow-400 hover:text-yellow-300 flex items-center justify-center h-full group"
-        >
-          Statues
-          <span
-            class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-yellow-300 rounded transition-all duration-300 ease-in-out group-hover:left-0 group-hover:w-full"
-          ></span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="#"
-          class="relative text-yellow-400 hover:text-yellow-300 flex items-center justify-center h-full group"
-        >
-          Ritual Items
-          <span
-            class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-yellow-300 rounded transition-all duration-300 ease-in-out group-hover:left-0 group-hover:w-full"
-          ></span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="#"
-          class="relative text-yellow-400 hover:text-yellow-300 flex items-center justify-center h-full group"
-        >
-          Wall Decor
-          <span
-            class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-yellow-300 rounded transition-all duration-300 ease-in-out group-hover:left-0 group-hover:w-full"
-          ></span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="#"
-          class="relative text-yellow-400 hover:text-yellow-300 flex items-center justify-center h-full group"
-        >
-          About
-          <span
-            class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-yellow-300 rounded transition-all duration-300 ease-in-out group-hover:left-0 group-hover:w-full"
-          ></span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-
-  <script>
-    const nav = document.getElementById("navBar");
-    let visible = true;
-    let scrollTimeout;
-    let isHovered = false;
-
-    nav.addEventListener("mouseenter", () => {
-      isHovered = true;
-      nav.style.opacity = "1";
-      visible = true;
-      if (scrollTimeout) clearTimeout(scrollTimeout);
-    });
-
-    nav.addEventListener("mouseleave", () => {
-      isHovered = false;
-      // Start hiding timer on mouse leave, if not scrolling
-      scrollTimeout = setTimeout(() => {
-        if (!isHovered && window.scrollY >= 50) {
-          nav.style.opacity = "0";
-          visible = false;
-        }
-      }, 1000); // Adjust delay here if needed
-    });
-
-    window.addEventListener("scroll", () => {
-      if (scrollTimeout) clearTimeout(scrollTimeout);
-
-      if (window.scrollY < 50) {
-        nav.style.opacity = "1";
-        visible = true;
-        return;
-      }
-
-      if (!visible) {
-        nav.style.opacity = "1";
-        visible = true;
-      }
-
-      // Hide only if not hovered
-      scrollTimeout = setTimeout(() => {
-        if (!isHovered && window.scrollY >= 50) {
-          nav.style.opacity = "0";
-          visible = false;
-        }
-      }, 1000);
-    });
-  </script>
-
   <body>
+    <!-- Navigation Bar -->
+    <nav
+      id="navBar"
+      class="bg-gradient-to-b from-[#2a1f14] py-2 shadow-2xl lotus-pattern rounded-lg sticky top-0 left-0 z-50 transition-opacity duration-500 opacity-100 w-auto flex justify-between items-center"
+    >
+      <div class="flex justify-between items-center px-6">
+        <div class="flex items-center">
+          <!-- Add Logo Image without Spelling-->
+          <img
+            src="./assets/divine_crafts_icon.png"
+            alt="Logo"
+            class="w-16 h-16 rounded-full"
+          />
+          <span class="text-yellow-400 text-xl font-bold ml-2"
+            >Divine Crafts</span
+          >
+        </div>
+      </div>
+      <ul class="flex space-x-4 md:space-x-8 px-6 items-center">
+        <li>
+          <a
+            href="#"
+            class="relative text-yellow-400 hover:text-yellow-300 flex items-center justify-center h-full group"
+          >
+            Home
+            <span
+              class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-yellow-300 rounded transition-all duration-300 ease-in-out group-hover:left-0 group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="relative text-yellow-400 hover:text-yellow-300 flex items-center justify-center h-full group"
+          >
+            Statues
+            <span
+              class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-yellow-300 rounded transition-all duration-300 ease-in-out group-hover:left-0 group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="relative text-yellow-400 hover:text-yellow-300 flex items-center justify-center h-full group"
+          >
+            Ritual Items
+            <span
+              class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-yellow-300 rounded transition-all duration-300 ease-in-out group-hover:left-0 group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="relative text-yellow-400 hover:text-yellow-300 flex items-center justify-center h-full group"
+          >
+            Wall Decor
+            <span
+              class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-yellow-300 rounded transition-all duration-300 ease-in-out group-hover:left-0 group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="relative text-yellow-400 hover:text-yellow-300 flex items-center justify-center h-full group"
+          >
+            About
+            <span
+              class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-yellow-300 rounded transition-all duration-300 ease-in-out group-hover:left-0 group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
     <!-- Header with traditional Buddhist patterns -->
     <header class="header-bg py-8">
       <div class="container mx-auto px-4 flex items-center justify-between">
-        <!-- Centered text -->
-        <style>
-          @keyframes shimmer {
-            0% {
-              background-position: -200% 0;
-            }
-            100% {
-              background-position: 200% 0;
-            }
-          }
-          .animate-shimmer {
-            background-size: 200% 100%;
-            animation: shimmer 3s linear infinite;
-          }
-        </style>
-
         <div
           class="flex flex-col items-center justify-center px-4 bg-gray-900 bg-opacity-50 max-w-3xl mx-auto rounded-lg p-6"
         >
@@ -218,55 +125,29 @@
       <section class="mb-16">
         <div class="bg-amber-50 rounded-lg shadow-lg p-6 md:p-8">
           <div class="text-center mb-6">
-            <h2 class="text-3xl font-bold text-amber-900 mb-4">
-              Featured Artifact
-            </h2>
-            <h3 class="text-2xl text-amber-800 mb-2">
-              Meditating Buddha Statue
-            </h3>
+            <h2
+              class="text-3xl font-bold text-amber-900 mb-4"
+              id="featured-artifact-title"
+            ></h2>
+            <h3
+              class="text-2xl text-amber-800 mb-2"
+              id="featured-artifact-subtitle"
+            ></h3>
           </div>
           <div class="flex gap-6 items-stretch">
             <img
-              src="./assets/meditating_buddha.webp"
               alt="Featured Buddha Statue"
               class="w-full md:w-1/2 h-auto object-cover rounded-lg"
+              id="featured-artifact-image"
             />
             <div class="bg-amber-100 p-4 rounded-lg">
               <p class="text-amber-700 mb-4">
-                Handcrafted from pure brass and adorned with intricate 24k gold
-                gilding, this statue depicts the Buddha in the Dhyana Mudra
-                (meditation posture), symbolizing wisdom and enlightenment. It
-                creates a serene atmosphere and adds a touch of spiritual
-                elegance to any space. Perfect for those seeking spiritual
-                growth, looking to create a Zen-like ambiance, or wishing to
-                embrace the teachings of compassion, mindfulness, and
-                harmony.<br /><br />
-                <i
-                  >Why You’ll Love It?<br /><br />
+                <span id="featured-artifact-description"></span>
+                <br /><br />
+                <span id="featured-artifact-mid-body-content"></span>
+              </p>
 
-                  Embodiment of Enlightenment – The Dhyana Mudra encourages deep
-                  meditation and inner wisdom.<br /><br />
-                  Luxurious Craftsmanship – Pure brass and 24k gold gilding
-                  create a radiant, heirloom-quality piece.<br /><br />
-                  Serene Atmosphere – Its calming presence transforms any room
-                  into a peaceful sanctuary.<br /><br />
-                  Versatile Elegance – Ideal for home décor, yoga studios,
-                  meditation corners, or altars.<br /><br />
-                  Daily Inspiration – A gentle reminder to cultivate
-                  mindfulness, compassion, and spiritual growth.</i
-                >
-              </p>
-              <p class="text-amber-800">
-                <span class="font-semibold">Dimensions:</span> 18" tall × 12"
-                wide
-              </p>
-              <p class="text-amber-800">
-                <span class="font-semibold">Weight:</span> 8.59 kg
-              </p>
-              <p class="text-amber-800">
-                <span class="font-semibold">Material:</span> Brass with gold
-                plating
-              </p>
+              <div id="featured-artifact-specifications"></div>
             </div>
           </div>
         </div>
@@ -280,292 +161,7 @@
           Our Divine Collection
         </h2>
 
-        <!-- Statues Section -->
-        <div class="mb-16">
-          <h3
-            class="text-2xl font-semibold text-amber-800 mb-6 flex items-center text-yellow-500"
-          >
-            <i class="fas fa-hands-praying mr-3 text-yellow-500"></i>
-            Buddha & Deity Statues
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Artifact Card 1 -->
-            <div
-              class="artifact-card bg-amber-50 rounded-lg overflow-hidden group"
-            >
-              <img
-                src="./assets/AmitbhaBuddha.webp"
-                alt="Amitabha Buddha"
-                class="w-full h-1/2 object-cover transition-transform duration-500 group-hover:scale-125"
-              />
-              <div class="p-6 bg-white relative z-10">
-                <h4 class="text-xl font-semibold text-amber-900 mb-2">
-                  Amitabha Buddha
-                </h4>
-                <p class="text-amber-700 mb-4">
-                  Brass statue of the Buddha of Infinite Light, 10" tall with
-                  hand-carved details.
-                </p>
-                <div class="text-sm text-amber-600">
-                  <p class="text-amber-700 mb-4">
-                    This statue is not only a powerful symbol in Buddhist
-                    temples but also a meaningful addition to your home. Placing
-                    it in your living room, meditation space, or garden can
-                    create a peaceful atmosphere and inspire daily
-                    mindfulness....
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Artifact Card 1 -->
-            <div
-              class="artifact-card bg-amber-50 rounded-lg overflow-hidden group"
-            >
-              <img
-                src="./assets/AmitbhaBuddha.webp"
-                alt="Amitabha Buddha"
-                class="w-full h-1/2 object-cover transition-transform duration-500 group-hover:scale-125"
-              />
-              <div class="p-6 bg-white relative z-10">
-                <h4 class="text-xl font-semibold text-amber-900 mb-2">
-                  Amitabha Buddha
-                </h4>
-                <p class="text-amber-700 mb-4">
-                  Brass statue of the Buddha of Infinite Light, 10" tall with
-                  hand-carved details.
-                </p>
-                <div class="text-sm text-amber-600">
-                  <p class="text-amber-700 mb-4">
-                    This statue is not only a powerful symbol in Buddhist
-                    temples but also a meaningful addition to your home. Placing
-                    it in your living room, meditation space, or garden can
-                    create a peaceful atmosphere and inspire daily
-                    mindfulness....
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Artifact Card 1 -->
-            <div
-              class="artifact-card bg-amber-50 rounded-lg overflow-hidden group"
-            >
-              <img
-                src="./assets/AmitbhaBuddha.webp"
-                alt="Amitabha Buddha"
-                class="w-full h-1/2 object-cover transition-transform duration-500 group-hover:scale-125"
-              />
-              <div class="p-6 bg-white relative z-10">
-                <h4 class="text-xl font-semibold text-amber-900 mb-2">
-                  Amitabha Buddha
-                </h4>
-                <p class="text-amber-700 mb-4">
-                  Brass statue of the Buddha of Infinite Light, 10" tall with
-                  hand-carved details.
-                </p>
-                <div class="text-sm text-amber-600">
-                  <p class="text-amber-700 mb-4">
-                    This statue is not only a powerful symbol in Buddhist
-                    temples but also a meaningful addition to your home. Placing
-                    it in your living room, meditation space, or garden can
-                    create a peaceful atmosphere and inspire daily
-                    mindfulness....
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="divider my-12"></div>
-
-        <!-- Ritual Items Section -->
-        <div class="mb-16">
-          <h3
-            class="text-2xl font-semibold text-amber-800 mb-6 flex items-center text-yellow-500"
-          >
-            <i class="fas fa-praying-hands mr-3"></i>
-            Ritual Items & Offerings
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Artifact Card 4 -->
-            <div
-              class="artifact-card bg-amber-50 rounded-lg overflow-hidden group"
-            >
-              <img
-                src="./assets/AmitbhaBuddha.webp"
-                alt="Amitabha Buddha"
-                class="w-full h-1/2 object-cover transition-transform duration-500 group-hover:scale-125"
-              />
-              <div class="p-6 bg-white relative z-10">
-                <h4 class="text-xl font-semibold text-amber-900 mb-2">
-                  Amitabha Buddha
-                </h4>
-                <p class="text-amber-700 mb-4">
-                  Brass statue of the Buddha of Infinite Light, 10" tall with
-                  hand-carved details.
-                </p>
-                <div class="text-sm text-amber-600">
-                  <p class="text-amber-700 mb-4">
-                    This statue is not only a powerful symbol in Buddhist
-                    temples but also a meaningful addition to your home. Placing
-                    it in your living room, meditation space, or garden can
-                    create a peaceful atmosphere and inspire daily
-                    mindfulness....
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Artifact Card 1 -->
-            <div
-              class="artifact-card bg-amber-50 rounded-lg overflow-hidden group"
-            >
-              <img
-                src="./assets/AmitbhaBuddha.webp"
-                alt="Amitabha Buddha"
-                class="w-full h-1/2 object-cover transition-transform duration-500 group-hover:scale-125"
-              />
-              <div class="p-6 bg-white relative z-10">
-                <h4 class="text-xl font-semibold text-amber-900 mb-2">
-                  Amitabha Buddha
-                </h4>
-                <p class="text-amber-700 mb-4">
-                  Brass statue of the Buddha of Infinite Light, 10" tall with
-                  hand-carved details.
-                </p>
-                <div class="text-sm text-amber-600">
-                  <p class="text-amber-700 mb-4">
-                    This statue is not only a powerful symbol in Buddhist
-                    temples but also a meaningful addition to your home. Placing
-                    it in your living room, meditation space, or garden can
-                    create a peaceful atmosphere and inspire daily
-                    mindfulness....
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Artifact Card 1 -->
-            <div
-              class="artifact-card bg-amber-50 rounded-lg overflow-hidden group"
-            >
-              <img
-                src="./assets/AmitbhaBuddha.webp"
-                alt="Amitabha Buddha"
-                class="w-full h-1/2 object-cover transition-transform duration-500 group-hover:scale-125"
-              />
-              <div class="p-6 bg-white relative z-10">
-                <h4 class="text-xl font-semibold text-amber-900 mb-2">
-                  Amitabha Buddha
-                </h4>
-                <p class="text-amber-700 mb-4">
-                  Brass statue of the Buddha of Infinite Light, 10" tall with
-                  hand-carved details.
-                </p>
-                <div class="text-sm text-amber-600">
-                  <p class="text-amber-700 mb-4">
-                    This statue is not only a powerful symbol in Buddhist
-                    temples but also a meaningful addition to your home. Placing
-                    it in your living room, meditation space, or garden can
-                    create a peaceful atmosphere and inspire daily
-                    mindfulness....
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="divider my-12"></div>
-
-        <!-- Wall Decor Section -->
-        <div>
-          <h3
-            class="text-2xl font-semibold text-amber-800 mb-6 flex items-center text-yellow-500"
-          >
-            <i class="fas fa-mountain mr-3"></i>
-            Wall Hangings & Decor
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div
-              class="artifact-card bg-amber-50 rounded-lg overflow-hidden group"
-            >
-              <img
-                src="./assets/AmitbhaBuddha.webp"
-                alt="Amitabha Buddha"
-                class="w-full h-1/2 object-cover transition-transform duration-500 group-hover:scale-125"
-              />
-              <div class="p-6 bg-white relative z-10">
-                <h4 class="text-xl font-semibold text-amber-900 mb-2">
-                  Amitabha Buddha
-                </h4>
-                <p class="text-amber-700 mb-4">
-                  Brass statue of the Buddha of Infinite Light, 10" tall with
-                  hand-carved details.
-                </p>
-                <div class="text-sm text-amber-600">
-                  <p class="text-amber-700 mb-4">
-                    This statue is not only a powerful symbol in Buddhist
-                    temples but also a meaningful addition to your home. Placing
-                    it in your living room, meditation space, or garden can
-                    create a peaceful atmosphere and inspire daily
-                    mindfulness....
-                </div>
-              </div>
-            </div>
-            <!-- Artifact Card 1 -->
-            <div
-              class="artifact-card bg-amber-50 rounded-lg overflow-hidden group"
-            >
-              <img
-                src="./assets/AmitbhaBuddha.webp"
-                alt="Amitabha Buddha"
-                class="w-full h-1/2 object-cover transition-transform duration-500 group-hover:scale-125"
-              />
-              <div class="p-6 bg-white relative z-10">
-                <h4 class="text-xl font-semibold text-amber-900 mb-2">
-                  Amitabha Buddha
-                </h4>
-                <p class="text-amber-700 mb-4">
-                  Brass statue of the Buddha of Infinite Light, 10" tall with
-                  hand-carved details.
-                </p>
-                <div class="text-sm text-amber-600">
-                  <p class="text-amber-700 mb-4">
-                    This statue is not only a powerful symbol in Buddhist
-                    temples but also a meaningful addition to your home. Placing
-                    it in your living room, meditation space, or garden can
-                    create a peaceful atmosphere and inspire daily
-                    mindfulness....
-                </div>
-              </div>
-            </div>
-            <!-- Artifact Card 1 -->
-            <div
-              class="artifact-card bg-amber-50 rounded-lg overflow-hidden group"
-            >
-              <img
-                src="./assets/AmitbhaBuddha.webp"
-                alt="Amitabha Buddha"
-                class="w-full h-1/2 object-cover transition-transform duration-500 group-hover:scale-125"
-              />
-              <div class="p-6 bg-white relative z-10">
-                <h4 class="text-xl font-semibold text-amber-900 mb-2">
-                  Amitabha Buddha
-                </h4>
-                <p class="text-amber-700 mb-4">
-                  Brass statue of the Buddha of Infinite Light, 10" tall with
-                  hand-carved details.
-                </p>
-                <div class="text-sm text-amber-600">
-                  <p class="text-amber-700 mb-4">
-                    This statue is not only a powerful symbol in Buddhist
-                    temples but also a meaningful addition to your home. Placing
-                    it in your living room, meditation space, or garden can
-                    create a peaceful atmosphere and inspire daily
-                    mindfulness....
-                </div>
-              </div>
-            </div>
-          </div>
+        <div id="divine-collection-container">
         </div>
       </section>
     </main>
@@ -575,18 +171,10 @@
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <!-- <div class="flex justify-between items-center gap-8">
-                  <img
-                  src="./assets/Black Gold and black sunshine meditation studio logo.png"
-                  alt="Logo"
-                  class="w-16 h-16 rounded-full"
-                  />
-                  
-                </div> -->
             <h3 class="text-xl font-semibold mb-4">Divine Metal Crafts</h3>
             <div class="flex items-center gap-8">
               <img
-                src="./assets/Black Gold and black sunshine meditation studio logo.png"
+                src="./assets/divine_crafts_icon.png"
                 alt="Logo"
                 class="w-24 h-24 rounded-full flex-shrink-0"
               />
@@ -632,5 +220,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- JAVA SCRIPT -->
+    <script src="./script/home_script.js" defer></script>
+    <!-- JAVA SCRIPT -->
   </body>
 </html>
